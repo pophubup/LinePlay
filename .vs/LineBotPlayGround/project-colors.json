@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b4c3168d-e1e2-4df0-a00e-1f08ee64826c": {
+      "ProjectGuid": "b4c3168d-e1e2-4df0-a00e-1f08ee64826c",
+      "DisplayName": "LineBotPlayGround",
+      "ColorIndex": 0
+    },
+    "2eeef81a-2f07-45d8-8185-06b0acf3f996": {
+      "ProjectGuid": "2eeef81a-2f07-45d8-8185-06b0acf3f996",
+      "DisplayName": "LineBotService",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
