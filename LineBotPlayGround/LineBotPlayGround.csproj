@@ -1,14 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>6e960671-66cc-40d4-a6dc-582bcfef6c9d</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+      <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
 	  <PackageReference Include="Line.Messaging" Version="1.4.5" />
+	  <PackageReference Include="LineBotSDK" Version="2.8.35" />
+	  <ProjectReference Include="..\GooglePlaceDetailClient\GooglePlaceDetailClient.csproj" />
+	  <ProjectReference Include="..\GoogleTextSerachClient\GoogleTextSerachClient.csproj" />
+	  <ProjectReference Include="..\LineMessageApiClient\LineMessageApiClient.csproj" />
+	  <Using Include="GoogleTextSerachClient" />
+	  <Using Include="GooglePlaceDetailClient" />
+	  <Using Include="LineMessageApiClient" />
   </ItemGroup>
-
+	
 </Project>

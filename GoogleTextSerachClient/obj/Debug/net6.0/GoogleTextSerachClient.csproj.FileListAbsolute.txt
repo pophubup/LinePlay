@@ -1,0 +1,12 @@
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GoogleTextSerachClient\bin\Debug\net6.0\GoogleTextSerachClient.deps.json
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GoogleTextSerachClient\bin\Debug\net6.0\GoogleTextSerachClient.dll
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GoogleTextSerachClient\bin\Debug\net6.0\GoogleTextSerachClient.pdb
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GoogleTextSerachClient\obj\Debug\net6.0\GoogleTextSerachClient.csproj.AssemblyReference.cache
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GoogleTextSerachClient\obj\Debug\net6.0\GoogleTextSerachClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GoogleTextSerachClient\obj\Debug\net6.0\GoogleTextSerachClient.AssemblyInfoInputs.cache
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GoogleTextSerachClient\obj\Debug\net6.0\GoogleTextSerachClient.AssemblyInfo.cs
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GoogleTextSerachClient\obj\Debug\net6.0\GoogleTextSerachClient.csproj.CoreCompileInputs.cache
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GoogleTextSerachClient\obj\Debug\net6.0\GoogleTextSerachClient.dll
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GoogleTextSerachClient\obj\Debug\net6.0\refint\GoogleTextSerachClient.dll
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GoogleTextSerachClient\obj\Debug\net6.0\GoogleTextSerachClient.pdb
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GoogleTextSerachClient\obj\Debug\net6.0\ref\GoogleTextSerachClient.dll

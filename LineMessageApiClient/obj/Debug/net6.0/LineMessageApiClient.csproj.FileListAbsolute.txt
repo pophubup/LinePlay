@@ -1,0 +1,12 @@
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\bin\Debug\net6.0\LineMessageApiClient.deps.json
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\bin\Debug\net6.0\LineMessageApiClient.dll
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\bin\Debug\net6.0\LineMessageApiClient.pdb
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\obj\Debug\net6.0\LineMessageApiClient.csproj.AssemblyReference.cache
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\obj\Debug\net6.0\LineMessageApiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\obj\Debug\net6.0\LineMessageApiClient.AssemblyInfoInputs.cache
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\obj\Debug\net6.0\LineMessageApiClient.AssemblyInfo.cs
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\obj\Debug\net6.0\LineMessageApiClient.csproj.CoreCompileInputs.cache
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\obj\Debug\net6.0\LineMessageApiClient.dll
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\obj\Debug\net6.0\refint\LineMessageApiClient.dll
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\obj\Debug\net6.0\LineMessageApiClient.pdb
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\obj\Debug\net6.0\ref\LineMessageApiClient.dll

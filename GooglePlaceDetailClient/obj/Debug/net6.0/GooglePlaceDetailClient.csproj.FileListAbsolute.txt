@@ -1,0 +1,12 @@
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GooglePlaceDetailClient\bin\Debug\net6.0\GooglePlaceDetailClient.deps.json
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GooglePlaceDetailClient\bin\Debug\net6.0\GooglePlaceDetailClient.dll
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GooglePlaceDetailClient\bin\Debug\net6.0\GooglePlaceDetailClient.pdb
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GooglePlaceDetailClient\obj\Debug\net6.0\GooglePlaceDetailClient.csproj.AssemblyReference.cache
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GooglePlaceDetailClient\obj\Debug\net6.0\GooglePlaceDetailClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GooglePlaceDetailClient\obj\Debug\net6.0\GooglePlaceDetailClient.AssemblyInfoInputs.cache
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GooglePlaceDetailClient\obj\Debug\net6.0\GooglePlaceDetailClient.AssemblyInfo.cs
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GooglePlaceDetailClient\obj\Debug\net6.0\GooglePlaceDetailClient.csproj.CoreCompileInputs.cache
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GooglePlaceDetailClient\obj\Debug\net6.0\GooglePlaceDetailClient.dll
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GooglePlaceDetailClient\obj\Debug\net6.0\refint\GooglePlaceDetailClient.dll
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GooglePlaceDetailClient\obj\Debug\net6.0\GooglePlaceDetailClient.pdb
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\GooglePlaceDetailClient\obj\Debug\net6.0\ref\GooglePlaceDetailClient.dll

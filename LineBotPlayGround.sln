@@ -5,6 +5,12 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LineBotPlayGround", "LineBotPlayGround\LineBotPlayGround.csproj", "{B4C3168D-E1E2-4DF0-A00E-1F08EE64826C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GooglePlaceDetailClient", "GooglePlaceDetailClient\GooglePlaceDetailClient.csproj", "{645E5540-57FC-4EEC-BC04-FB32AC152672}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleTextSerachClient", "GoogleTextSerachClient\GoogleTextSerachClient.csproj", "{30FF5CAC-CBFD-4AFD-A9AE-D91FF55C476F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineMessageApiClient", "LineMessageApiClient\LineMessageApiClient.csproj", "{9250F5F0-A7DF-4EAB-9E0A-5DFD63EC9BC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{B4C3168D-E1E2-4DF0-A00E-1F08EE64826C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4C3168D-E1E2-4DF0-A00E-1F08EE64826C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4C3168D-E1E2-4DF0-A00E-1F08EE64826C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{645E5540-57FC-4EEC-BC04-FB32AC152672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645E5540-57FC-4EEC-BC04-FB32AC152672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645E5540-57FC-4EEC-BC04-FB32AC152672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645E5540-57FC-4EEC-BC04-FB32AC152672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30FF5CAC-CBFD-4AFD-A9AE-D91FF55C476F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30FF5CAC-CBFD-4AFD-A9AE-D91FF55C476F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30FF5CAC-CBFD-4AFD-A9AE-D91FF55C476F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30FF5CAC-CBFD-4AFD-A9AE-D91FF55C476F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9250F5F0-A7DF-4EAB-9E0A-5DFD63EC9BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9250F5F0-A7DF-4EAB-9E0A-5DFD63EC9BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9250F5F0-A7DF-4EAB-9E0A-5DFD63EC9BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9250F5F0-A7DF-4EAB-9E0A-5DFD63EC9BC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

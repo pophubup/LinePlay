@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "o7VI3p0tDQA8pFnDT0kink/yr/JQBddCqAAgfFMfZGp2Cj/3ZTAL1Lpha1iDRHsyelJPHVxRfStkW91gv5vZZA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Yohoo\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\Yohoo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Yohoo\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Yohoo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
