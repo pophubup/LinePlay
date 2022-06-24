@@ -200,7 +200,7 @@ app.MapPost("/POST",  ( HttpContext httpContext ) =>
     //    var MessageJSON = Messages.Replace("$flex$", flexContents);
     //    bot.PushMessageWithJSON(UserId, MessageJSON);
     
-     builder.Services.BuildServiceProvider().GetService<LineBotApp>().RunAsync();
+     builder.Services?.BuildServiceProvider()?.GetService<ILineBot>()?.RunAsync();
 
     return "Success";
 

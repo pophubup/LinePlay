@@ -5,6 +5,10 @@ using System.Text;
 
 namespace LineMessageApiClient
 {
+    public interface ILineBot
+    {
+        void RunAsync();
+    }
     internal static class WebhookRequestMessageHelper
     {
         internal static async Task<IEnumerable<WebhookEvent>> GetWebhookEventsAsync(this HttpRequest request, string channelSecret, string botUserId = null)
@@ -64,7 +68,7 @@ namespace LineMessageApiClient
             return diff == 0;
         }
     }
-    public class LineBotApp : WebhookApplication
+    public class LineBotApp : WebhookApplication, ILineBot
     {
         private readonly IConfiguration _config;
         private readonly LineMessagingClient _messagingClient;
@@ -76,7 +80,7 @@ namespace LineMessageApiClient
             _messagingClient = new LineMessagingClient(_config.GetSection("accessToken").Value);
           
         }
-        public  void RunAsync()
+        public void RunAsync()
         {
              this.RunAsync(_event).GetAwaiter().GetResult();
         }
@@ -270,7 +274,7 @@ namespace LineMessageApiClient
     {
         public static IServiceCollection AddLineMessageApiClient(this IServiceCollection service)
         {
-            service.AddScoped<LineBotApp>();
+            service.AddScoped<ILineBot,LineBotApp>();
             return service;
         }
     }
