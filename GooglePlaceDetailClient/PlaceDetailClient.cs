@@ -3,7 +3,11 @@ using Newtonsoft.Json;
 
 namespace GooglePlaceDetailClient
 {
-    public class PlaceDetailFuncs
+    public interface IGooglePlaceDetail
+    {
+        GooglePlaceDetailResponse GetPlaceDetail(string place_id);
+    }
+    public class PlaceDetailFuncs : IGooglePlaceDetail
     {
         public GooglePlaceDetailResponse GetPlaceDetail(string place_id)
         {
@@ -15,7 +19,7 @@ namespace GooglePlaceDetailClient
     {
         public static IServiceCollection AddGooglePlaceDetailClient(this IServiceCollection service)
         {
-            service.AddScoped<PlaceDetailFuncs>();
+            service.AddSingleton<IGooglePlaceDetail, PlaceDetailFuncs>();
             return service;
         }
     }

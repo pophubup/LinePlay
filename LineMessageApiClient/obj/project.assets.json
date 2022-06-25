@@ -1703,6 +1703,36 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "GooglePlaceDetailClient/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "bin/placeholder/GooglePlaceDetailClient.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GooglePlaceDetailClient.dll": {}
+        }
+      },
+      "GoogleTextSerachClient/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "bin/placeholder/GoogleTextSerachClient.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GoogleTextSerachClient.dll": {}
+        }
       }
     }
   },
@@ -5751,10 +5781,22 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "GooglePlaceDetailClient/1.0.0": {
+      "type": "project",
+      "path": "../GooglePlaceDetailClient/GooglePlaceDetailClient.csproj",
+      "msbuildProject": "../GooglePlaceDetailClient/GooglePlaceDetailClient.csproj"
+    },
+    "GoogleTextSerachClient/1.0.0": {
+      "type": "project",
+      "path": "../GoogleTextSerachClient/GoogleTextSerachClient.csproj",
+      "msbuildProject": "../GoogleTextSerachClient/GoogleTextSerachClient.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "GooglePlaceDetailClient >= 1.0.0",
+      "GoogleTextSerachClient >= 1.0.0",
       "Line.Messaging >= 1.4.5",
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0",
       "Microsoft.Extensions.Configuration.Abstractions >= 6.0.0",
@@ -5766,27 +5808,24 @@
   },
   "packageFolders": {
     "C:\\Users\\Yohoo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\LineMessageApiClient\\LineMessageApiClient.csproj",
+      "projectUniqueName": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\LineMessageApiClient\\LineMessageApiClient.csproj",
       "projectName": "LineMessageApiClient",
-      "projectPath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\LineMessageApiClient\\LineMessageApiClient.csproj",
+      "projectPath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\LineMessageApiClient\\LineMessageApiClient.csproj",
       "packagesPath": "C:\\Users\\Yohoo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\LineMessageApiClient\\obj\\",
+      "outputPath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\LineMessageApiClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\Yohoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -5799,7 +5838,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj": {
+              "projectPath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj"
+            },
+            "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GoogleTextSerachClient\\GoogleTextSerachClient.csproj": {
+              "projectPath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GoogleTextSerachClient\\GoogleTextSerachClient.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

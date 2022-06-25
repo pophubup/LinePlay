@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ci0fOSa+BxIGBVgXT0I1drPMWEmIvR2au0C8JKpPjiIdij6TLx03CxVwR7zR/jRObSBoqWv2LTc84ZYrrQ0nuQ==",
+  "dgSpecHash": "B3nv1FUgxAc8o4bq4UFZc2m4EiZF6R7qvIk8bkvlU87V9B6qaMfzk3qJpO3dcaim3jw+XhRHi5nTQRwbGSA2RQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\LineBotPlayGround\\LineBotPlayGround.csproj",
+  "projectFilePath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\LineBotPlayGround\\LineBotPlayGround.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yohoo\\.nuget\\packages\\line.messaging\\1.4.5\\line.messaging.1.4.5.nupkg.sha512",
     "C:\\Users\\Yohoo\\.nuget\\packages\\linebotsdk\\2.8.35\\linebotsdk.2.8.35.nupkg.sha512",

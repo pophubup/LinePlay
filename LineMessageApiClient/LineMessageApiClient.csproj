@@ -13,9 +13,13 @@
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
 		<PackageReference Include="Line.Messaging" Version="1.4.5" />
+		<ProjectReference Include="..\GooglePlaceDetailClient\GooglePlaceDetailClient.csproj" />
+		<ProjectReference Include="..\GoogleTextSerachClient\GoogleTextSerachClient.csproj" />
+		<Using Include="GoogleTextSerachClient" />
+		<Using Include="GooglePlaceDetailClient" />
 		<Using Include="Microsoft.Extensions.DependencyInjection" />
 		<Using Include="Line.Messaging" />
 		<Using Include="Line.Messaging.Webhooks" />
-		<Using Include=" Newtonsoft.Json" />
+		<Using Include="Newtonsoft.Json" />
 	</ItemGroup>
 </Project>

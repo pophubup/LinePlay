@@ -14,11 +14,7 @@
       <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
 	  <PackageReference Include="Line.Messaging" Version="1.4.5" />
 	  <PackageReference Include="LineBotSDK" Version="2.8.35" />
-	  <ProjectReference Include="..\GooglePlaceDetailClient\GooglePlaceDetailClient.csproj" />
-	  <ProjectReference Include="..\GoogleTextSerachClient\GoogleTextSerachClient.csproj" />
 	  <ProjectReference Include="..\LineMessageApiClient\LineMessageApiClient.csproj" />
-	  <Using Include="GoogleTextSerachClient" />
-	  <Using Include="GooglePlaceDetailClient" />
 	  <Using Include="LineMessageApiClient" />
   </ItemGroup>
 	

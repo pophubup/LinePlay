@@ -4,7 +4,6 @@ C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\Line
 C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\LineBotPlayGround.deps.json
 C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\LineBotPlayGround.runtimeconfig.json
 C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\LineBotPlayGround.dll
-C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\ref\LineBotPlayGround.dll
 C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\LineBotPlayGround.pdb
 C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\Line.Messaging.dll
 C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\Microsoft.OpenApi.dll
@@ -68,3 +67,18 @@ C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineBotPlayGround\bin\Debug\net6.0\Li
 C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineBotPlayGround\bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
 C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineBotPlayGround\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
 C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineBotPlayGround\bin\Debug\net6.0\Microsoft.Extensions.Hosting.dll
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\line.json
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\LineBotSDK.dll
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\Microsoft.Extensions.Hosting.dll
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\GooglePlaceDetailClient.dll
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\GoogleTextSerachClient.dll
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\LineMessageApiClient.dll
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\GooglePlaceDetailClient.pdb
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\GoogleTextSerachClient.pdb
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\LineMessageApiClient.pdb
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\obj\Debug\net6.0\LineBotPlayGround.csproj.AssemblyReference.cache
+C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\obj\Debug\net6.0\refint\LineBotPlayGround.dll

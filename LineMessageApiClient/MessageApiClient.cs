@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using GooglePlaceDetailClient;
+using GoogleTextSerachClient;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System.Security.Cryptography;
 using System.Text;
@@ -7,12 +9,13 @@ namespace LineMessageApiClient
 {
     public interface ILineBot
     {
-        void RunAsync();
+        string RunAsync(HttpContext httpContext);
     }
     internal static class WebhookRequestMessageHelper
     {
-        internal static async Task<IEnumerable<WebhookEvent>> GetWebhookEventsAsync(this HttpRequest request, string channelSecret, string botUserId = null)
+        internal static async Task<(IEnumerable<WebhookEvent>, LineMessagingClient)> GetWebhookEventsAsync(this HttpRequest request, IConfiguration iconfig , string botUserId = null)
         {
+            string channelSecret = iconfig.GetSection("channelSecret").Value;
             if (request == null) { throw new ArgumentNullException(nameof(request)); }
             if (channelSecret == null) { throw new ArgumentNullException(nameof(channelSecret)); }
 
@@ -37,7 +40,7 @@ namespace LineMessageApiClient
                     throw new UserIdMismatchException("Bot user ID does not match.");
                 }
             }
-            return WebhookEventParser.ParseEvents(json.events);
+            return ( WebhookEventParser.ParseEvents(json.events) , new LineMessagingClient(iconfig.GetSection("accessToken").Value));
         }
 
         internal static bool VerifySignature(string channelSecret, string xLineSignature, string requestBody)
@@ -71,18 +74,21 @@ namespace LineMessageApiClient
     public class LineBotApp : WebhookApplication, ILineBot
     {
         private readonly IConfiguration _config;
-        private readonly LineMessagingClient _messagingClient;
-        private readonly IEnumerable<WebhookEvent> _event;
-        public LineBotApp(IHttpContextAccessor HttpContextAccessor, IConfiguration config)
+        private  LineMessagingClient _messagingClient = default!;
+        private IGooglePlaceDetail _googlePlaceDetail;
+        private IGoogleTextSearch _googleTextSearch;
+        public LineBotApp(IConfiguration config, IGooglePlaceDetail googlePlaceDetail, IGoogleTextSearch googleTextSearch)
         {
             _config = config;
-            _event = HttpContextAccessor.HttpContext.Request.GetWebhookEventsAsync(_config.GetSection("channelSecret").Value).GetAwaiter().GetResult();
-            _messagingClient = new LineMessagingClient(_config.GetSection("accessToken").Value);
-          
+            _googlePlaceDetail = googlePlaceDetail;
+            _googleTextSearch = googleTextSearch;
         }
-        public void RunAsync()
+        public string RunAsync( HttpContext httpContext)
         {
-             this.RunAsync(_event).GetAwaiter().GetResult();
+            var ( _event, messagingClient) =  httpContext.Request.GetWebhookEventsAsync(_config).GetAwaiter().GetResult();
+            _messagingClient = messagingClient;
+            base.RunAsync(_event).GetAwaiter().GetResult();
+            return  "Success";
         }
         protected override async Task OnMessageAsync(MessageEvent ev)
         {
@@ -175,89 +181,90 @@ namespace LineMessageApiClient
                 };
                     break;
                 case EventMessageType.Location:
-                    //var longitude = ev.Message.GetType().GetProperty("Longitude")?.GetValue(ev.Message)?.ToString();
-                    //var Latitude = ev.Message.GetType().GetProperty("Latitude")?.GetValue(ev.Message)?.ToString();
-                    //var Address = ev.Message.GetType().GetProperty("Address")?.GetValue(ev.Message)?.ToString();
 
-                    // var ddd =  new HttpClient().GetAsync($"https://maps.googleapis.com/maps/api/place/textsearch/json?query={Address} 附近餐廳&radius=1000&key=AIzaSyBoI8mRu2B4RZEfCjSE61WjBS8G1dUFu-w").GetAwaiter().GetResult();
-                    //var ccc = JsonConvert.DeserializeObject<GoogleTextSearchResponse>(ddd.Content.ReadAsStringAsync().GetAwaiter().GetResult());
-                    //var topfive = ccc.results.Take(10);
-                    //var bubbles = new List<BubbleContainer>();
+               
+                    var Address = ev.Message.GetType().GetProperty("Address")?.GetValue(ev.Message)?.ToString();
+                    var texts = _googleTextSearch.GetTextSearch(Address, "附近餐廳");
+                    var cards = texts?.results.Take(10).Select(x =>
+                    {
+                        var detail = _googlePlaceDetail.GetPlaceDetail(x.place_id)?.result;
+                      var second = detail?.opening_hours?.weekday_text.Select(x=> new TextComponent()
+                      {
+                          Text = x,
+                          Wrap = true,
+                          Align = Align.Start,
+                          Size = ComponentSize.Sm,
+                          Color = "#9C9C9C"
+                      }).ToList();
+                        var first = new TextComponent
+                        {
+                            Text = detail?.formatted_address,
+                            Size = ComponentSize.Md,
+                             Wrap = true,
+                            Weight = Weight.Bold,
+                            Color = "#9C9C9C"
+                        };
+                        var body = new List<IFlexComponent>();
+                        body.Add(first);
+                        body.Add(new SeparatorComponent() { Margin = Spacing.Md });
+                        body.AddRange(second);
+                       
+                       
+                        return new BubbleContainer()
+                        {
+                            Hero = new ImageComponent
+                            {
+                                Url = $"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={x.photos.FirstOrDefault()?.photo_reference}&key=AIzaSyBoI8mRu2B4RZEfCjSE61WjBS8G1dUFu-w",
+                                Size = ComponentSize.Full,
+                                AspectRatio = new AspectRatio(151, 100),
+                                AspectMode = AspectMode.Cover,
+                                BackgroundColor = "#FFFFFF",
 
-                    //topfive.ToList().ForEach(x =>
-                    //{
-
-                    //    x.photos.ForEach(y =>
-                    //    {
-                    //        var photo = new HttpClient().GetAsync($"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={y.photo_reference}&key=AIzaSyBoI8mRu2B4RZEfCjSE61WjBS8G1dUFu-w").GetAwaiter().GetResult();
-
-                    //        var img = new ImageComponent
-                    //        {
-                    //            Url = $"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={y.photo_reference}&key=AIzaSyBoI8mRu2B4RZEfCjSE61WjBS8G1dUFu-w",
-                    //            Size = ComponentSize.Full,
-                    //            AspectRatio = new AspectRatio(151, 100),
-                    //            AspectMode = AspectMode.Cover,
-                    //            BackgroundColor = "#FFFFFF",
-
-                    //        };
-                    //        var body = new BoxComponent
-                    //        {
-                    //            Layout = BoxLayout.Vertical,
-                    //            Contents = new List<IFlexComponent>
-                    //            {
-                    //                 new TextComponent
-                    //                 {
-                    //                      Text = x.name,
-                    //                      Weight = Weight.Bold,
-                    //                      Size = ComponentSize.Xl
-                    //                 },
-                    //                 new TextComponent
-                    //                 {
-                    //                    Text = x.formatted_address,
-                    //                    Size = ComponentSize.Md,
-                    //                    Color = "#9C9C9C"
-                    //                 },
-
-                    //            },
-
-                    //        };
-
-                    //        var Details = new HttpClient().GetAsync($"https://maps.googleapis.com/maps/api/place/details/json?place_id={x.place_id}&key=AIzaSyBoI8mRu2B4RZEfCjSE61WjBS8G1dUFu-w").GetAwaiter().GetResult();
-                    //        var moreinfo = JsonConvert.DeserializeObject<GooglePlaceDetailResponse>(ddd.Content.ReadAsStringAsync().GetAwaiter().GetResult());
-                    //        var footer = new BoxComponent()
-                    //        {
-                    //            Layout = BoxLayout.Horizontal,
-                    //            Contents = new List<IFlexComponent>
-                    //            {
-                    //              new ButtonComponent
-                    //              {
-                    //                  Action = new UriTemplateAction("Go!!!", moreinfo.result.url),
-                    //              }
-                    //            }
-                    //        };
-
-                    //        bubbles.Add(new BubbleContainer()
-                    //        {
-                    //            Hero = img,
-                    //            Body = body,
-                    //            Footer = footer
-                    //        });
-                    //    });
-                    //});
-                    //result = new List<ISendMessage>
-                    //{
-                    //     new FlexMessage("附近的餐廳 1 公里以內")
-                    //     {
-                    //          Contents = new CarouselContainer
-                    //          { 
-                    //             Contents = bubbles,
+                            },
+                            Header = new BoxComponent
+                            {
+                                Layout = BoxLayout.Vertical,
+                                Contents = new List<IFlexComponent>
+                                {
+                                    new TextComponent
+                                     {
+                                          Text = detail?.name,
+                                          Weight = Weight.Bold,
+                                          Size = ComponentSize.Xl
+                                     },
+                                }
+                            },
+                            Body = new BoxComponent
+                            {
+                                Layout = BoxLayout.Vertical,
+                                Contents = body
+                            },
+                            Footer = new BoxComponent()
+                            {
+                                Layout = BoxLayout.Horizontal,
+                                Contents = new List<IFlexComponent>
+                                {
+                                          new ButtonComponent
+                                          {
+                                              Action = new UriTemplateAction("Go!!!", detail?.url),
+                                          }
+                                }
+                            }
+                        };
+                    }).ToList();
+                    result = new List<ISendMessage>
+                    {
+                         new FlexMessage("附近的餐廳 1 公里以內")
+                         {
+                              Contents = new CarouselContainer
+                              {
+                                 Contents = cards,
 
 
-                    //          }
-                    //     }
+                              }
+                         }
 
-                    //};
-
+                    };
                     break;
                 case EventMessageType.Image:
                     break;
@@ -274,7 +281,9 @@ namespace LineMessageApiClient
     {
         public static IServiceCollection AddLineMessageApiClient(this IServiceCollection service)
         {
-            service.AddScoped<ILineBot,LineBotApp>();
+            service.AddGooglePlaceDetailClient();
+            service.AddGoogleTextSearchClient();
+            service.AddTransient<ILineBot,LineBotApp>();
             return service;
         }
     }

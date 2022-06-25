@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "LineMessageApiClient/1.0.0": {
         "dependencies": {
+          "GooglePlaceDetailClient": "1.0.0",
+          "GoogleTextSerachClient": "1.0.0",
           "Line.Messaging": "1.4.5",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
@@ -1096,6 +1098,26 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "GooglePlaceDetailClient/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "GooglePlaceDetailClient.dll": {}
+        }
+      },
+      "GoogleTextSerachClient/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "GoogleTextSerachClient.dll": {}
+        }
       }
     }
   },
@@ -1846,6 +1868,16 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "GooglePlaceDetailClient/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GoogleTextSerachClient/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
