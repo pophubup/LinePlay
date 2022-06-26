@@ -1,4 +1,5 @@
 ﻿using GoogleTextSerachClient.Model;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
 namespace GoogleTextSerachClient
@@ -9,9 +10,14 @@ namespace GoogleTextSerachClient
     }
     public class TextSearchFuncs: IGoogleTextSearch
     {
+        private readonly IConfiguration _config;
+        public TextSearchFuncs(IConfiguration config)
+        {
+            _config = config;
+        }
         public GoogleTextSearchResponse GetTextSearch(string Address, string keyword)
         {
-            var Details = new HttpClient().GetAsync($"https://maps.googleapis.com/maps/api/place/textsearch/json?query={Address} {keyword}&radius=1000&key=AIzaSyBoI8mRu2B4RZEfCjSE61WjBS8G1dUFu-w").GetAwaiter().GetResult();
+            var Details = new HttpClient().GetAsync($"https://maps.googleapis.com/maps/api/place/textsearch/json?query={Address} {keyword}&radius=1000&key={_config.GetSection("apikey").Value}").GetAwaiter().GetResult();
             return JsonConvert.DeserializeObject<GoogleTextSearchResponse>(Details.Content.ReadAsStringAsync().GetAwaiter().GetResult());
         }
     }

@@ -67,7 +67,6 @@ C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineBotPlayGround\bin\Debug\net6.0\Li
 C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineBotPlayGround\bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
 C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineBotPlayGround\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
 C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineBotPlayGround\bin\Debug\net6.0\Microsoft.Extensions.Hosting.dll
-C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\line.json
 C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\LineBotSDK.dll
 C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\Yohoo\Desktop\LineBotPlayGround\LineBotPlayGround\bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll

@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddLineMessageApiClient();
-
+builder.Configuration.AddJsonFile(@"C:\Users\Yohoo\Desktop\key.json");
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

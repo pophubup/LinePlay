@@ -15,7 +15,7 @@ namespace LineMessageApiClient
     {
         internal static async Task<(IEnumerable<WebhookEvent>, LineMessagingClient)> GetWebhookEventsAsync(this HttpRequest request, IConfiguration iconfig , string botUserId = null)
         {
-            string channelSecret = iconfig.GetSection("channelSecret").Value;
+            string channelSecret = iconfig["LineBot:channelSecret"];
             if (request == null) { throw new ArgumentNullException(nameof(request)); }
             if (channelSecret == null) { throw new ArgumentNullException(nameof(channelSecret)); }
 
@@ -40,7 +40,7 @@ namespace LineMessageApiClient
                     throw new UserIdMismatchException("Bot user ID does not match.");
                 }
             }
-            return ( WebhookEventParser.ParseEvents(json.events) , new LineMessagingClient(iconfig.GetSection("accessToken").Value));
+            return ( WebhookEventParser.ParseEvents(json.events) , new LineMessagingClient(iconfig["LineBot:accessToken"]));
         }
 
         internal static bool VerifySignature(string channelSecret, string xLineSignature, string requestBody)
@@ -181,8 +181,6 @@ namespace LineMessageApiClient
                 };
                     break;
                 case EventMessageType.Location:
-
-               
                     var Address = ev.Message.GetType().GetProperty("Address")?.GetValue(ev.Message)?.ToString();
                     var texts = _googleTextSearch.GetTextSearch(Address, "附近餐廳");
                     var cards = texts?.results.Take(10).Select(x =>
