@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\LineMessageApiClient\\LineMessageApiClient.csproj": {}
+    "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\LineMessageApiClient\\LineMessageApiClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj": {
+    "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj",
+        "projectUniqueName": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj",
         "projectName": "GooglePlaceDetailClient",
-        "projectPath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj",
+        "projectPath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj",
         "packagesPath": "C:\\Users\\Yohoo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GooglePlaceDetailClient\\obj\\",
+        "outputPath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GooglePlaceDetailClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Yohoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -68,7 +70,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -77,26 +80,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GoogleTextSerachClient\\GoogleTextSerachClient.csproj": {
+    "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GoogleTextSerachClient\\GoogleTextSerachClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GoogleTextSerachClient\\GoogleTextSerachClient.csproj",
+        "projectUniqueName": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GoogleTextSerachClient\\GoogleTextSerachClient.csproj",
         "projectName": "GoogleTextSerachClient",
-        "projectPath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GoogleTextSerachClient\\GoogleTextSerachClient.csproj",
+        "projectPath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GoogleTextSerachClient\\GoogleTextSerachClient.csproj",
         "packagesPath": "C:\\Users\\Yohoo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GoogleTextSerachClient\\obj\\",
+        "outputPath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GoogleTextSerachClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Yohoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -145,7 +150,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -154,26 +160,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\LineMessageApiClient\\LineMessageApiClient.csproj": {
+    "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\LineMessageApiClient\\LineMessageApiClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\LineMessageApiClient\\LineMessageApiClient.csproj",
+        "projectUniqueName": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\LineMessageApiClient\\LineMessageApiClient.csproj",
         "projectName": "LineMessageApiClient",
-        "projectPath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\LineMessageApiClient\\LineMessageApiClient.csproj",
+        "projectPath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\LineMessageApiClient\\LineMessageApiClient.csproj",
         "packagesPath": "C:\\Users\\Yohoo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\LineMessageApiClient\\obj\\",
+        "outputPath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\LineMessageApiClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Yohoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -187,11 +195,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj": {
-                "projectPath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj"
+              "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj": {
+                "projectPath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GooglePlaceDetailClient\\GooglePlaceDetailClient.csproj"
               },
-              "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GoogleTextSerachClient\\GoogleTextSerachClient.csproj": {
-                "projectPath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\GoogleTextSerachClient\\GoogleTextSerachClient.csproj"
+              "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GoogleTextSerachClient\\GoogleTextSerachClient.csproj": {
+                "projectPath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\GoogleTextSerachClient\\GoogleTextSerachClient.csproj"
               }
             }
           }
@@ -241,7 +249,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -250,7 +259,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

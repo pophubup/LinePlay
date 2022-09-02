@@ -99,86 +99,32 @@ namespace LineMessageApiClient
             switch (ev.Message.Type)
             {
                 case EventMessageType.Text:
-                    result = new List<ISendMessage>
-                {
-                     new FlexMessage("AltText")
-                     {
-                          Contents = new CarouselContainer
-                          {
-
-                                Contents = new List<BubbleContainer>()
-                                {
-                                       new BubbleContainer()
-            {
-                  Hero = new ImageComponent
+                    var richMenu = new RichMenu()
+                    {
+                        Size = new ImagemapSize(2500, 843),
+                        Selected = false,
+                        Name = "richmenu-1",
+                        ChatBarText = "選單1",
+                        Areas = new List<ActionArea>()
+    {
+        new ActionArea()
         {
-            Url = "https://ithelp.ithome.com.tw/upload/images/20200106/20106865q03SKAqv0U.png",
-            Size = ComponentSize.Full,
-            AspectRatio = new AspectRatio(151, 100),
-            AspectMode = AspectMode.Cover,
-            BackgroundColor = "#FFFFFF",
-
+            Bounds = new ImagemapArea(0, 0 ,833, 843),
+            Action = new MessageTemplateAction("文字", "Hello, iBot!")
         },
-                 Body =    new BoxComponent
+        new ActionArea()
         {
-            Layout = BoxLayout.Vertical,
-            Contents = new List<IFlexComponent>
-            {
-                new TextComponent
-                {
-                    Text = "Title",
-                    Weight = Weight.Bold,
-                    Size = ComponentSize.Xl
-                },
-                new TextComponent
-                {
-                    Text = "Content Text",
-                    Size = ComponentSize.Md,
-                    Color = "#9C9C9C"
-                }
-            },
-
-            }
-
-
+            Bounds = new ImagemapArea(833, 0 ,833, 843),
+            Action = new UriTemplateAction("網址", "https://ithelp.ithome.com.tw/users/20106865/ironman/2732")
         },
-                                       new BubbleContainer()
-                                       {
-                                             Hero = new ImageComponent
+        new ActionArea()
         {
-            Url = "https://ithelp.ithome.com.tw/upload/images/20200106/20106865q03SKAqv0U.png",
-            Size = ComponentSize.Full,
-            AspectRatio = new AspectRatio(151, 100),
-            AspectMode = AspectMode.Cover,
-            BackgroundColor = "#FFFFFF",
-
-        },
-                                             Body = new BoxComponent
-        {
-            Layout = BoxLayout.Vertical,
-            Contents = new List<IFlexComponent>
-            {
-                new TextComponent
-                {
-                    Text = "Title",
-                    Weight = Weight.Bold,
-                    Size = ComponentSize.Xl
-                },
-                new TextComponent
-                {
-                    Text = "Content Text",
-                    Size = ComponentSize.Md,
-                    Color = "#9C9C9C"
-                }
-            },
-
-            }
-                                       },
-                                },
-
-                          }
-                     }
-                };
+            Bounds = new ImagemapArea(1666, 0 ,833, 843),
+            Action = new PostbackTemplateAction("選單2", "action=changeMenu2")
+        }
+    }
+                    };
+                    await _messagingClient.CreateRichMenuAsync(richMenu);
                     break;
                 case EventMessageType.Location:
                     var Address = ev.Message.GetType().GetProperty("Address")?.GetValue(ev.Message)?.ToString();
@@ -212,7 +158,7 @@ namespace LineMessageApiClient
                         {
                             Hero = new ImageComponent
                             {
-                                Url = $"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={x.photos.FirstOrDefault()?.photo_reference}&key=AIzaSyBoI8mRu2B4RZEfCjSE61WjBS8G1dUFu-w",
+                                Url = $"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={x.photos.FirstOrDefault()?.photo_reference}&key={_config.GetSection("apikey").Value}",
                                 Size = ComponentSize.Full,
                                 AspectRatio = new AspectRatio(151, 100),
                                 AspectMode = AspectMode.Cover,

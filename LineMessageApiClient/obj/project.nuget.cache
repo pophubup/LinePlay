@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oNo8Zlp4WqCJY0osHsv5+m3St92v5HRyu4XpugBW13sFgCOx2GfgTfWyCO63liC/6/WT4//kbMxoU8zeQk2edQ==",
+  "dgSpecHash": "osHFIz3r+7LKj+D4mGD5egW9GTndzJwvFzLqvFJVH9xvYWt8J8Ip5UmVpjOJ8KrO30mMP27R+ljnzXOnj8cTqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yohoo\\Desktop\\LineBotPlayGround\\LineMessageApiClient\\LineMessageApiClient.csproj",
+  "projectFilePath": "C:\\Users\\Yohoo\\OneDrive\\桌面\\my\\LinePlay\\LineMessageApiClient\\LineMessageApiClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yohoo\\.nuget\\packages\\line.messaging\\1.4.5\\line.messaging.1.4.5.nupkg.sha512",
     "C:\\Users\\Yohoo\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

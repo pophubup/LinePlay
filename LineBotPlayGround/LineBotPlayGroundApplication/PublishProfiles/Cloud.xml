@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PublishProfile xmlns="http://schemas.microsoft.com/2015/05/fabrictools">
+  <!-- ClusterConnectionParameters 可讓您指定連接到 Service Fabric 叢集時所要使用的 PowerShell 參數。
+       舉凡 Connect-ServiceFabricCluster Cmdlet 接受的參數，均為有效參數。
+
+       對於遠端叢集，您必須為特定的叢集指定適當的參數。
+         例如: <ClusterConnectionParameters ConnectionEndpoint="mycluster.westus.cloudapp.azure.com:19000" />
+
+       下列範例顯示使用憑證安全性之叢集的參數:
+       <ClusterConnectionParameters ConnectionEndpoint="mycluster.westus.cloudapp.azure.com:19000"
+                                    X509Credential="true"
+                                    ServerCertThumbprint="0123456789012345678901234567890123456789"
+                                    FindType="FindByThumbprint"
+                                    FindValue="9876543210987654321098765432109876543210"
+                                    StoreLocation="CurrentUser"
+                                    StoreName="My" />
+
+       下列範例顯示使用 Azure Active Directory (AAD) 安全性之叢集的參數:
+       <ClusterConnectionParameters ConnectionEndpoint="mycluster.westus.cloudapp.azure.com:19000"
+                                    AzureActiveDirectory="true"
+                                    ServerCertThumbprint="0123456789012345678901234567890123456789" />
+  -->
+  <ClusterConnectionParameters ConnectionEndpoint="" />
+  <ApplicationParameterFile Path="..\ApplicationParameters\Cloud.xml" />
+  <CopyPackageParameters CompressPackage="true" />
+</PublishProfile>

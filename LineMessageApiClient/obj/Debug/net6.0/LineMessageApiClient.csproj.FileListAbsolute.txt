@@ -27,3 +27,8 @@ C:\Users\Yohoo\Desktop\LineBotPlayGround\LineMessageApiClient\bin\Debug\net6.0\G
 C:\Users\Yohoo\Desktop\LineBotPlayGround\LineMessageApiClient\bin\Debug\net6.0\GooglePlaceDetailClient.pdb
 C:\Users\Yohoo\Desktop\LineBotPlayGround\LineMessageApiClient\bin\Debug\net6.0\GoogleTextSerachClient.pdb
 C:\Users\Yohoo\Desktop\LineBotPlayGround\LineMessageApiClient\obj\Debug\net6.0\LineMessageApiClient.csproj.CopyComplete
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\bin\Debug\net6.0\GooglePlaceDetailClient.dll
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\bin\Debug\net6.0\GoogleTextSerachClient.dll
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\bin\Debug\net6.0\GooglePlaceDetailClient.pdb
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\bin\Debug\net6.0\GoogleTextSerachClient.pdb
+C:\Users\Yohoo\OneDrive\桌面\my\LinePlay\LineMessageApiClient\obj\Debug\net6.0\LineMessageApiClient.csproj.CopyComplete

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PublishProfile xmlns="http://schemas.microsoft.com/2015/05/fabrictools">
+  <!-- ClusterConnectionParameters 可讓您指定在連線到 Service Fabric 叢集時，要使用的 PowerShell 參數。
+       有效參數為 Connect-ServiceFabricCluster cmdlet 接受的任何參數。
+
+       若是本機叢集，您通常不會使用任何參數。
+         例如: <ClusterConnectionParameters />
+  -->
+  <ClusterConnectionParameters />
+  <ApplicationParameterFile Path="..\ApplicationParameters\Local.5Node.xml" />
+</PublishProfile>

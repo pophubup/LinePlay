@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationManifest ApplicationTypeName="LineBotPlayGroundApplicationType"
+                     ApplicationTypeVersion="1.0.0"
+                     xmlns="http://schemas.microsoft.com/2011/01/fabric"
+                     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Parameters>
+    <Parameter Name="Test1_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="Test1_Isolation" DefaultValue="default" />
+  </Parameters>
+  <!-- 從 ServicePackage 匯入 ServiceManifest。ServiceManifestName 和 ServiceManifestVersion
+       應該符合 ServiceManifest.xml 檔案中所定義 ServiceManifest 項目的
+       Name 和 Version 屬性。 -->
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="Test1Pkg" ServiceManifestVersion="1.0.0" />
+    <Policies>
+      <ContainerHostPolicies CodePackageRef="Code" Isolation="[Test1_Isolation]">
+        <PortBinding ContainerPort="80" EndpointRef="Test1TypeEndpoint" />
+      </ContainerHostPolicies>
+    </Policies>
+  </ServiceManifestImport>
+  <DefaultServices>
+    <!-- 下面的區段會在建立這個應用程式類型的執行個體時，建立
+         服務類型的執行個體。您也可以使用 ServiceFabric PowerShell 模組，建立服務類型的
+         一或多個執行個體。
+
+         下面的 ServiceTypeName 屬性必須符合所匯入 ServiceManifest.xml 檔案中定義的名稱。 -->
+    <Service Name="Test1" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="Test1Type" InstanceCount="[Test1_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+  </DefaultServices>
+</ApplicationManifest>
